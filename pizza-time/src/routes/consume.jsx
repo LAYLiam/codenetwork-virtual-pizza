@@ -33,22 +33,22 @@ const pizza_index = new Map([
 ])
 
 const pizza_box_paths = new Map([
-    ['Cheesy Garlic', '/public/pizzas/cheesy-garlic/cheesy-garlic-'],
-    ['Chicken Supreme', '/public/pizzas/chicken-supreme/chicken-supreme-'],
-    ['Ham and Cheese', '/public/pizzas/ham-and-cheese/ham-and-cheese-'],
-    ['Margarita', '/public/pizzas/margarita/margarita-'],
-    ['Pepperoni', '/public/pizzas/pepperoni/pepperoni-'],
-    ['Spicy Lovers', '/public/pizzas/spicy/spicy-'],
+    ['Cheesy Garlic', './pizzas/cheesy-garlic/cheesy-garlic-'],
+    ['Chicken Supreme', './pizzas/chicken-supreme/chicken-supreme-'],
+    ['Ham and Cheese', './pizzas/ham-and-cheese/ham-and-cheese-'],
+    ['Margarita', './pizzas/margarita/margarita-'],
+    ['Pepperoni', './pizzas/pepperoni/pepperoni-'],
+    ['Spicy Lovers', './pizzas/spicy/spicy-'],
     ['empty', '/public/pizzas/pizza-0.png']
 ]);
 
 const pizza_nutrition = new Map([
-    ['Cheesy Garlic', '/public/nutrition/cheesy-garlic.png'],
-    ['Chicken Supreme', '/public/nutrition/chicken-supreme.png'],
-    ['Ham and Cheese', '/public/nutrition/ham-and-cheese.png'],
-    ['Margarita', '/public/nutrition/margarita.png'],
-    ['Pepperoni', '/public/nutrition/pepperoni.png'],
-    ['Spicy Lovers', '/public/nutrition/spicy.png']
+    ['Cheesy Garlic', './nutrition/cheesy-garlic.png'],
+    ['Chicken Supreme', './nutrition/chicken-supreme.png'],
+    ['Ham and Cheese', './nutrition/ham-and-cheese.png'],
+    ['Margarita', './nutrition/margarita.png'],
+    ['Pepperoni', './nutrition/pepperoni.png'],
+    ['Spicy Lovers', './nutrition/spicy.png']
 ]);
 
 export default function Consume() {

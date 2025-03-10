@@ -3,13 +3,13 @@ import './../styles/popupwindow.css'
 import { useState } from 'react'
 
 const slice_paths = new Map([
-     ['Cheesy Garlic', '/public/slice/cheesy-garlic-slice.png'],
-     ['Chicken Supreme', '/public/slice/chicken-supreme-slice.png'],
-     ['Ham and Cheese', '/public/slice/ham-and-cheese-slice.png'],
-     ['Margarita', '/public/slice/margarita-slice.png'],
-     ['Pepperoni', '/public/slice/pepperoni-slice.png'],
-     ['Spicy Lovers', '/public/slice/spicy-slice.png'],
-     ['crumbs', '/public/slice/crumbs.png']
+     ['Cheesy Garlic', './slice/cheesy-garlic-slice.png'],
+     ['Chicken Supreme', './slice/chicken-supreme-slice.png'],
+     ['Ham and Cheese', './slice/ham-and-cheese-slice.png'],
+     ['Margarita', './slice/margarita-slice.png'],
+     ['Pepperoni', './slice/pepperoni-slice.png'],
+     ['Spicy Lovers', './slice/spicy-slice.png'],
+     ['crumbs', './slice/crumbs.png']
 ]);
 
 export default function PopupWindow(props) {  
