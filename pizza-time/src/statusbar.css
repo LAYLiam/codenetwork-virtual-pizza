@@ -1,0 +1,65 @@
+p1 {
+    margin-right: 3em;
+}
+
+.stage {
+    padding: 5em;
+}
+
+.hello-name:hover {
+    text-decoration: underline;
+    text-decoration-color: #1e1e1e;
+    text-decoration-thickness: 0.15em;
+    animation: underline 0.25s;
+    text-decoration-color: rgba(56,204,60,1);
+}
+
+@keyframes underline {
+    0% { text-decoration-color: rgba(56, 204, 60, 0); }    
+    20% { text-decoration-color: rgba(56, 204, 60, 0.1); } 
+    40% { text-decoration-color: rgba(56, 204, 60, 0.2); } 
+    60% { text-decoration-color: rgba(56, 204, 60, 0.4); }
+    80% { text-decoration-color: rgba(56, 204, 60, 0.8); } 
+    100% { text-decoration-color: rgba(56, 204, 60, 0.9); } 
+}
+
+.bar {
+    position: absolute;
+    width: fit-content;
+    top: 6em;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding-block: 0.5em;
+    padding-inline: 2em;
+    border-radius: 3em;
+    display: inline-flex;
+    background-color: #1e1e1e;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bar:hover {
+    animation: shadow 0.25s;
+    filter: drop-shadow(0 0 1em  rgba(0, 0, 0, 0.2));
+}
+
+@keyframes shadow {
+    0% {filter: drop-shadow(0 0 1em  rgba(0, 0, 0, 0.02))}    
+    20% {filter: drop-shadow(0 0 1em  rgba(0, 0, 0, 0.05))} 
+    40% {filter: drop-shadow(0 0 1em  rgba(0, 0, 0, 0.09))} 
+    60% {filter: drop-shadow(0 0 1em  rgba(0, 0, 0, 0.1))} 
+    80% {filter: drop-shadow(0 0 1em  rgba(0, 0, 0, 0.15))} 
+    100% {filter: drop-shadow(0 0 1em  rgba(0, 0, 0, 0.20))} 
+}
+
+.tile {
+    margin-left: 1em;
+    background-color: #1e1e1e;
+}
+
+.tile:hover {
+    background-color: #282828;
+    border-color: #38cc3c;
+    border-radius: 3em;
+}

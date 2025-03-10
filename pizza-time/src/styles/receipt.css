@@ -1,0 +1,23 @@
+.receipt {
+    padding: 3.5em;
+    padding-inline: 6em;
+    border-style: groove;
+    border-width: 0.5em;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: black;
+    font-size: xx-small;
+    text-align: left;
+    display:list-item;
+    margin: 0em;   
+    background-color: whitesmoke;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.receipt:hover {
+    z-index: 60;
+    background-color: white;
+    filter: drop-shadow(0 0 5em white);
+}

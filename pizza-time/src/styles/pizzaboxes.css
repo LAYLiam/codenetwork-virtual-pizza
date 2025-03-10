@@ -1,0 +1,46 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+  
+html {
+    background: url('./../assets/pizza/stone-marble-wall-background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pizza {
+    margin: -0.9em;
+    width: 10em;
+    height: 12em;
+    background: url('./../assets/pizza/closed-pizza-box.png') no-repeat;
+    background-size: cover;
+}
+
+.pizza-gf {
+    margin: -0.9em;
+    width: 10em;
+    height: 12em;
+    background: url('./../assets/pizza/closed-pizza-box-gf.png') no-repeat;
+    background-size: cover;
+}
+
+.pizza:hover, .pizza-gf:hover {
+    margin: -0.9em;
+    width: 10em;
+    height: 12em;
+    background: url('./../assets/pizza/opened-pizza-box.png') no-repeat;
+    background-size: cover;
+    filter: drop-shadow(0 0 2em  rgba(0, 0, 0, 0.2))
+}
+
+.pizza-row {
+    align-items: center;
+    display: flex;
+    margin: -5em;
+    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.35))
+}

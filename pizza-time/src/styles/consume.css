@@ -1,0 +1,60 @@
+.pizza-info {
+    padding-top: 5em;
+}
+
+.pizza-tile {
+    float: left;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 2em;
+    height: 30em;
+    filter: drop-shadow(0 0 2em black)
+}
+
+.pizza-box {
+    display: block;
+    margin-block: -6em;
+    margin-inline: -2em;
+    height: 30em;
+    padding-block: 2em;
+}
+
+.pizza-box:hover {
+    animation: shake 0.5s;
+}
+
+.consume {
+    width: 15em;
+    margin-bottom: 2em;
+    border-radius: 3em;
+}
+
+.consume:hover {
+    background-color: #282828;
+    border-color: #38cc3c;
+    filter: drop-shadow(0 0 0.5em rgba(123, 168, 111, 0.5))
+}
+
+.nutrition-tile {
+    margin-left: 3em;
+    float:right;
+    height: 30em;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 2em;
+    filter: drop-shadow(0 0 2em black)
+}
+
+.pizza-nutrition {
+    display: flex;
+    justify-content: center;
+    width: 15em;
+    padding-top: 2em;
+    margin-inline: 3em;
+}

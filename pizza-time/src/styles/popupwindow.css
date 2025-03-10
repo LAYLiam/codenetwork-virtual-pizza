@@ -1,0 +1,58 @@
+h2 {
+    padding-inline: 2em;
+}
+
+.dismiss-button {
+    height: 3em;
+    width: 4em;
+    padding-right: 1EM;
+    display: flex;
+    padding-right: 1em;
+    margin-left: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center ;
+    color: black;
+    border-radius: 4em;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.popup {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-66.5%, 0%);
+    height: 25em;
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 2em;
+    margin: 5em;
+    filter: drop-shadow(0 0 2em #000000);
+  }
+
+.popup-canvas {
+    justify-content: center;
+    align-items: center;
+}
+
+.pizza-slice {
+    padding-top: 3em;
+    height: 12em;
+    filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.4));
+}
+
+.pizza-slice:active {
+    padding-top: 1.5em;
+    height: 15em;
+}
+
+.pizza-slice:hover {
+    animation: shake 1s infinite;
+}
+  
