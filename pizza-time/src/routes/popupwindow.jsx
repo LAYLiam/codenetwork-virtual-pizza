@@ -19,8 +19,9 @@ export default function PopupWindow(props) {
 
     function handleClicks() {
         setClicks(clicks => clicks + 1);
-        if (clicks > 10) {
+        if (clicks == 10) {
             setPath(slice_paths.get('crumbs'));
+            const response = fetch('https://cn-pizza-worker.llay.workers.dev/decrement/' + props.id);
         };
     }
 

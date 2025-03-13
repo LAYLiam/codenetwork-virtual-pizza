@@ -45,7 +45,7 @@ export default function Receipt() {
           <h3>$0 	Spicy Lovers (Large, Gluten Free Sourdough Base)	GF</h3>
           <h3>----------------------------------------------------------------</h3>
           <h3>Total Digital Pizzas: 24</h3>
-          <h3>Total Cost: $0 (Anthony is happy)</h3>
+          <h3>Total Cost: $0 (Treasurer is happy)</h3>
 
       </div>
     </>

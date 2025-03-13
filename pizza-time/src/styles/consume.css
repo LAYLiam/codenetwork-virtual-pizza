@@ -41,11 +41,8 @@
 .nutrition-tile {
     margin-left: 3em;
     float:right;
-    height: 30em;
+    height: 30em;   
     display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     background-color: white;
     border-radius: 2em;
     filter: drop-shadow(0 0 2em black)
@@ -53,8 +50,30 @@
 
 .pizza-nutrition {
     display: flex;
-    justify-content: center;
     width: 15em;
-    padding-top: 2em;
+    margin-bottom: -1.1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-inline: 3em;
 }
+
+.GF-tag {
+    margin: -0.2em;
+    width: 5em;
+    float: end;
+    filter: drop-shadow(0 0 0.03em rgba(0, 0, 0, 0.8));
+    padding-left: 14em;
+}
+
+.pizza-title {
+    color: #1e1e1e;
+    text-align: center;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+
+.pizza-title:hover {
+    animation: shake 1s;
+}
+

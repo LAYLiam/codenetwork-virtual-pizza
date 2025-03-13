@@ -1,8 +1,9 @@
 import TitleBar from './../titlebar'
 import StatusBar from './../statusbar'
 import PopUp from './../routes/popupwindow'
-import { useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom';
+import GF from './../assets/pizza/gf-tag.png'
+import { useState, useEffect } from 'react'
+import { useFetcher, useLocation, useNavigate } from 'react-router-dom';
 import './../styles/consume.css'
 
 const pizza_index = new Map([
@@ -39,7 +40,8 @@ const pizza_box_paths = new Map([
     ['Margarita', './pizzas/margarita/margarita-'],
     ['Pepperoni', './pizzas/pepperoni/pepperoni-'],
     ['Spicy Lovers', './pizzas/spicy/spicy-'],
-    ['empty', '/public/pizzas/pizza-0.png']
+    ['empty', '/public/pizzas/pizza-0.png'],
+    ['blur', '/public/pizzas/pizza-0-blur.png']
 ]);
 
 const pizza_nutrition = new Map([
@@ -56,15 +58,23 @@ export default function Consume() {
   const pizza_id = location && location.state.id;
   const type = pizza_index.get(pizza_id);
   const nutrition_path = pizza_nutrition.get(type);
+  const gf_pizzas = [24, 23, 22];
+  
+  const [value, setValue] = useState(0);
+  const [popUpActive, activatePopUp] = useState(0);
+  const [pizzaImgPath, setPizzaImgPath] = useState(pizza_box_paths.get("blur"));
 
-  const [popUpActive, activatePopUp] = useState(false);
-  const [sliceCount, setSliceCount] = useState(3); 
-  const [pizzaImgPath, setPizzaImgPath] = useState(
-        sliceCount == 0 ? pizza_box_paths.get("empty") : pizza_box_paths.get(type) + sliceCount + ".png"
-    );
-    
+  useEffect(() => {
+    const response = fetch('https://cn-pizza-worker.llay.workers.dev/get/' + pizza_id)
+      .then((response) => response.json())
+      .then((data) => {
+        setValue(data.value);
+        setPizzaImgPath(data.value== 0 ? pizza_box_paths.get("empty") : pizza_box_paths.get(type) + data.value+ ".png");
+      })
+  }, []);
+
   function buttonClicked() {
-    activatePopUp(!popUpActive);
+    activatePopUp(1);
   }
 
   return (
@@ -72,16 +82,19 @@ export default function Consume() {
       <TitleBar/>
       <StatusBar/> 
       <div className='pizza-info'>
+      <div className='nutrition-tile'>
+            <h1 className="pizza-title">{type}</h1>
+            <img src={nutrition_path} className="pizza-nutrition" alt='Pizza nutriton image. I stole it from Dominos website.'/>
+            {gf_pizzas.includes(pizza_id) ? <img src={GF} className='GF-tag'/> : null}
+        </div>
         <div className='pizza-tile'>
             <h1>{type} Pizza</h1>
             <img src={pizzaImgPath} onClick={buttonClicked} className="pizza-box" alt='Opened pizza box visually showing quantity of pizzas.'/>
             <button onClick={buttonClicked} className='consume'>Click To Eat</button>
         </div>
-        <div className='nutrition-tile'>
-            <img src={nutrition_path} className="pizza-nutrition" alt='Pizza nutriton image. I stole it from Dominos website.'/>
-        </div>
+
       </div>        
-      {popUpActive ? <PopUp type={type} count={sliceCount}/> : null}
+      {popUpActive ? <PopUp type={type} count={value} id={pizza_id}/> : null}
     </>      
   );
 };
