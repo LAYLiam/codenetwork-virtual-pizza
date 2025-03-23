@@ -33,5 +33,8 @@ Here is a demo of the application as current:
 # 📦 Stack 📦
 This webapp uses React + Vite (Javascript + SWC) and uses Cloudflare's Worker KV data storage, and Serverless Workers to communicate between the front-end and the KV.
 Cloudflare KV means just Key-Value. Since this project just needed to know the live slice count for each pizza, KV was all that was required.
-Code for the serverless worker can also be found in this repositry under the `serverless` directory.
-![Image of the stack used: React + Vite + Cloudflare](images/frameworks-and-services-used.png)
+Code for the serverless worker can also be found in this repositry under the `serverless` directory.  
+
+<br> 
+
+![Image of the stack used: React + Vite + Cloudflare](images/frameworks-n-services-used.png)
