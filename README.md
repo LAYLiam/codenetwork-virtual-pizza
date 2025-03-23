@@ -21,7 +21,7 @@ Some other features, to be implemented, include:
 <br>
 
 > [!NOTE]  
-> If you are a student at QUT-GP studying a coding related subject, come join us at Code Network most Monday nights.  
+> If you are a student at QUT-GP studying a coding related subject, come join us at Code Network most Monday nights.
 > See our social media for more @ https://www.linkedin.com/company/codenetwork/
 
 <br>
