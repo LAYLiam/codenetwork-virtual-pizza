@@ -28,7 +28,9 @@ Some other features, to be implemented, include:
 
 Here is a demo of the application as current:  
 ![gif demo of the Virtual Pizza web-app](images/v1-example.gif)
-On local clone, or on deployed website (TODO), the pizzas may be greyed out. This likely means that the Cloudflare serverless worker has been shut down to prevent unexpected spam.
+On local clone, or on deployed website (TODO), the pizzas may be greyed out. This likely means that the Cloudflare serverless worker has been shut down to prevent unexpected spam to the worker.
+
+<br>
 
 # 📦 Stack 📦
 This webapp uses React + Vite (Javascript + SWC) and uses Cloudflare's Worker KV data storage, and Serverless Workers to communicate between the front-end and the KV.
