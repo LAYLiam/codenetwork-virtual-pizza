@@ -13,6 +13,7 @@ const slice_paths = new Map([
 ]);
 
 export default function PopupWindow(props) {  
+    const [audio] = useState(new Audio('./sounds/munch-sound-effect.mp3'));
     const [clicks, setClicks] = useState(0);
     const [imagePath, setPath] = useState(props.count > 0 ? slice_paths.get(props.type) : slice_paths.get('crumbs'));
     const text = "Spam click the " + (props.count > 0 ? "slice" : "finished pizza. There are still crumbs") + " to eat!";
@@ -20,6 +21,7 @@ export default function PopupWindow(props) {
     function handleClicks() {
         setClicks(clicks => clicks + 1);
         if (clicks == 10) {
+            audio.play();
             setPath(slice_paths.get('crumbs'));
             const response = fetch('https://cn-pizza-worker.llay.workers.dev/decrement/' + props.id);
         };

@@ -1,32 +1,34 @@
 import { useNavigate } from "react-router-dom";
 import './statusbar.css'
-import { useEffect } from "react";
+import { useState } from "react";
 
-export default function StatusBar(props) {
+export default function StatusBar() {
+  const username = localStorage.getItem('username');
+
   const navigate_home = useNavigate();
   const handleClick_home = () => {
-    navigate_home("/pizza", { state: {id: props.name} })
+    navigate_home("/pizza")
   }
 
   const navigate_drink = useNavigate();
   const handleClick_drink = () => {
-    navigate_drink("/other", { state: {id: props.name} })
+    navigate_drink("/other")
   }
 
   const navigate_leaderboard = useNavigate();
   const handleClick_leaderboard = () => {
-    navigate_leaderboard("/leaderboard", { state: {id: props.name} })
+    navigate_leaderboard("/leaderboard")
   }
 
   const navigate_receipt = useNavigate();
   const handleClick_receipt = () => {
-    navigate_receipt("/receipt", { state: {id: props.name} })
+    navigate_receipt("/receipt")
   }
 
   return (
     <>
       <div className="bar">
-        <p1 className="hello-name" onClick={handleClick_home}>Hello {props.name == null ? "coder" : props.name}!</p1>
+        <p1 className="hello-name" onClick={handleClick_home}>Hello{(username == null || username == "null")? "" : " " + username}!</p1>
         <button className='tile' onClick={handleClick_leaderboard}>🏆 Rank</button>
         <button className='tile' onClick={handleClick_drink}>🍺 Drinks</button>
         <button className='tile' onClick={handleClick_receipt}>📃 Receipt</button>

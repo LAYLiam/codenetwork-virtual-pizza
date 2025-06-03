@@ -4,7 +4,7 @@ import Pizzas from "./routes/pizzaboxes";
 import Other from "./routes/other";
 import Receipt from "./routes/receipt";
 import Leaderboard from "./routes/leaderboard";
-import Consume from "./routes/consume"
+import Consume from "./routes/consume";
 
 export default function App() {
   return (
